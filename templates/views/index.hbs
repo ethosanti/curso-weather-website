@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Principal</title>
+        <link rel="icon" href="/images/favicon.gif" />
+        <link rel= "stylesheet", href="/css/stilos.css">
+        
+    </head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <h3>{{titulo}}</h3>
+        <p>El usuario actual es:=> {{usuario}}  !!!</p>
+        <form>
+            <input placeholder="ubicacion">
+            <button>Buscar</button>
+        </form>
+        <p id="msg-1"></p>
+        <p id="msg-2"></p>
+    </div>
+
+
+{{>footer}}
+<!-- se cambio de posición el script para tener acceso a los componentes del formulario -->
+<script src="/js/app.js"></script> 
+</body>
+</html>
