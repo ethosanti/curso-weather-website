@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 //console.log(__filename)
 //console.log(path.join(__dirname, '../public'))
 const app = express()
-
+//comentario para forzar git ...
 //se indica a Express el motor de plantilla instalado ...hbs@4.1.2
 // Define los path para Express
 app.set('view engine','hbs')    //hay que eliminar el index.html statico, después de coiarlo en index.hbs
