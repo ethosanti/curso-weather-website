@@ -25,8 +25,8 @@ weatherForm.addEventListener('submit', (e)=> {
     e.preventDefault()  //para controlar la salidas sin refrescar la pagina
     const location= search.value
     console.log('En prueba ...'+ location)
-
-    fetch('http://localhost:3000/weather?dir='+location).then ((response)=>{
+    //se elimino http://localhost:3000 por heroku
+    fetch('/weather?dir='+location).then ((response)=>{
         response.json().then((data) =>{
             if(data.error){ //recordar if(body.features.length === 0) de geocode para dir=! no funciona
                 console.log(data.error)

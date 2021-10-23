@@ -7,6 +7,8 @@ const forecast = require('./utils/forecast')
 //console.log(__filename)
 //console.log(path.join(__dirname, '../public'))
 const app = express()
+//puerto desde ambiente heroku o el default local
+const port = process.env.PORT || 3000
 //comentario para forzar git ...
 //se indica a Express el motor de plantilla instalado ...hbs@4.1.2
 // Define los path para Express
@@ -114,9 +116,9 @@ app.get('/about', (req, res)=>{
     res.send('<h1>Se trata de una Prueba</h1>')
 
 })*/
-
-app.listen(3000, ()=>{
-    console.log('Servidor activo en puerto 3000')
+//se cambia 3000 por el puero de heroku 
+app.listen(port, ()=>{
+    console.log('Servidor activo en puerto' + port)
 
 })
 
