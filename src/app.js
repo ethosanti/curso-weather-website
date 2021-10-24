@@ -47,7 +47,7 @@ app.get('/weather',(req, res)=>{
         if(error){
             return res.send({geocode: error})
         }
-        console.log(location +'==> '+ latitude+' longitud => '+longitude)   //por default asigno las de Panama
+       // console.log(location +'==> '+ latitude+' longitud => '+longitude)   //por default asigno las de Panama
         forecast(latitude, longitude ,(error, forcastData)=>{
             if(error){
                 return res.send({forecast:error})
